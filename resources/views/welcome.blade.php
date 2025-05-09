@@ -70,7 +70,7 @@
             <!-- Hero Section -->
             <section class="py-16 text-center fade-up">
                 <div class="max-w-4xl mx-auto px-4">
-                    <img src="{{ asset('assets/img/pp2.jpg') }}"
+                    <img src="{{ asset('assets/img/pp2.png') }}"
                         class="w-40 h-40 md:w-52 md:h-52 mx-auto rounded-full border-4 border-white shadow-xl" />
                     <h2 class="text-4xl font-bold mt-6 text-blue-800">Apik Banyubasa</h2>
                     <!-- Jobdesk Section -->
