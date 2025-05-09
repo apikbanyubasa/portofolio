@@ -53,7 +53,7 @@
                     Home
                 </a>
                 <a href="{{ url('/resumeed') }}"
-                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumeed') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumepu') ? 'text-blue-600 ' : 'text-gray-700' }}">
                     Resume
                 </a>
                 <a href="{{ url('/projects') }}"
