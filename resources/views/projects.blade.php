@@ -19,27 +19,29 @@
         <!-- Navbar -->
         <header id="navbar" class="navbar-blur fixed top-0 w-full z-50 border-none">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-blue-700">Apikby</h1>
+                <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-blue-700">Apikby</h1>
 
-                <!-- Tombol Hamburger -->
-                <button id="hamburger" class="hamburger hamburger--collapse md:hidden" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
+                <button id="hamburger"
+                    class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center group">
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute top-2"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800"></span>
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute bottom-2"></span>
                 </button>
 
-                <!-- Menu Utama -->
-                <nav class="hidden md:flex md:items-center space-x-6 text-base text-xl font-extrabold">
+
+                <nav class="hidden md:flex md:items-center space-x-6 text-xl font-extrabold">
                     <a href="{{ url('/') }}"
-                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('/') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('/') ? 'text-blue-600' : 'text-gray-700' }}">
                         Home
                     </a>
                     <a href="{{ url('/resumeed') }}"
-                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumeed') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumeed') ? 'text-blue-600' : 'text-gray-700' }}">
                         Resume
                     </a>
                     <a href="{{ url('/projects') }}"
-                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('projects') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                        class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('projects') ? 'text-blue-600' : 'text-gray-700' }}">
                         Projects
                     </a>
                 </nav>
@@ -49,36 +51,39 @@
             <div id="mobile-menu"
                 class="hidden md:hidden px-4 py-4 space-y-2 backdrop-blur-md text-right rounded-b-xl shadow-lg font-extrabold">
                 <a href="{{ url('/') }}"
-                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('/') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('/') ? 'text-blue-600' : 'text-gray-700' }}">
                     Home
                 </a>
                 <a href="{{ url('/resumeed') }}"
-                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumeed') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('resumeed') ? 'text-blue-600' : 'text-gray-700' }}">
                     Resume
                 </a>
                 <a href="{{ url('/projects') }}"
-                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('projects') ? 'text-blue-600 ' : 'text-gray-700' }}">
+                    class="block py-2 transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('projects') ? 'text-blue-600' : 'text-gray-700' }}">
                     Projects
                 </a>
             </div>
         </header>
 
         <!-- Spacing because navbar is fixed -->
-        <div class="h-20"></div>
+        <div class="h-16 sm:h-20"></div>
 
         <!-- Konten Utama -->
         <main class="flex-grow">
             <!-- Projects Section -->
-            <section id="projects" class="py-16">
+            <section id="projects" class="py-8 sm:py-16">
                 <div class="max-w-6xl mx-auto px-4">
-                    <h3 class="text-3xl font-bold mb-10 text-center text-gray-800 animate-fadeInUp">Projects</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <h3
+                        class="text-xl sm:text-2xl lg:text-3xl font-bold mb-10 text-center text-gray-800 animate-fadeInUp">
+                        Projects</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
                         <!-- Project 1 -->
                         <a href="https://github.com/apikbanyubasa/login-buahku.git" target="_blank">
                             <div
                                 class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
                                 <img src="{{ asset('assets/img/2.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-xl text-center font-semibold mb-2 text-gray-800">Buahku</h4>
+                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Buahku
+                                </h4>
                             </div>
                         </a>
 
@@ -87,7 +92,8 @@
                             <div
                                 class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
                                 <img src="{{ asset('assets/img/1.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-xl text-center font-semibold mb-2 text-gray-800">Bogor Cinemap</h4>
+                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Bogor
+                                    Cinemap</h4>
                             </div>
                         </a>
 
@@ -96,17 +102,18 @@
                             <div
                                 class="bg-white p-4  rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
                                 <img src="{{ asset('assets/img/3.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-xl text-center font-semibold mb-2 text-gray-800">Yuma Laundry</h4>
+                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Yuma
+                                    Laundry</h4>
                             </div>
                         </a>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
                         <!-- Project 1 -->
                         <a href="https://github.com/apikbanyubasa/scanmask.git" target="_blank">
                             <div
                                 class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
                                 <img src="{{ asset('assets/img/4.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-xl text-center font-semibold mb-2 text-gray-800">Scanmask</h4>
+                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Scanmask
+                                </h4>
                             </div>
                         </a>
 
@@ -115,7 +122,8 @@
                             <div
                                 class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
                                 <img src="{{ asset('assets/img/5.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-xl text-center font-semibold mb-2 text-gray-800">Toko Febri Lestari</h4>
+                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Febri
+                                    Lestari</h4>
                             </div>
                         </a>
 
@@ -126,7 +134,7 @@
 
         <!-- Footer -->
         <footer class="bg-transparent backdrop-blur text-center py-6">
-            <p class="text-gray-600">&copy; 2025 Apik Banyubasa.</p>
+            <p class="text-xs lg:text-lg text-gray-600">&copy; 2025 Apik Banyubasa.</p>
         </footer>
     </div>
 

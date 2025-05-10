@@ -1,40 +1,42 @@
- // Hamburger
- const hamburger = document.getElementById('hamburger');
- const mobileMenu = document.getElementById('mobile-menu');
- hamburger.addEventListener('click', () => {
-     hamburger.classList.toggle('is-active');
-     mobileMenu.classList.toggle('open');
- });
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
 
- // Navbar scroll effect
- const navbar = document.getElementById('navbar');
- window.addEventListener('scroll', () => {
-     if (window.scrollY > 20) {
-         navbar.classList.add('navbar-scrolled');
-     } else {
-         navbar.classList.remove('navbar-scrolled');
-     }
- });
+// SINGLE event listener, no duplicate
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger-active');
 
- // Fade-up effect on scroll
- const fadeEls = document.querySelectorAll('.fade-up');
- const fadeObserver = new IntersectionObserver((entries) => {
-     entries.forEach(entry => {
-         if (entry.isIntersecting) {
-             entry.target.classList.add('visible');
-         }
-     });
- }, {
-     threshold: 0.1
- });
+    if (mobileMenu.classList.contains('open')) {
+        // Tambahkan animasi keluar
+        mobileMenu.classList.add('animate-fade-up');
+        setTimeout(() => {
+            mobileMenu.classList.remove('open', 'animate-fade-up');
+            mobileMenu.classList.add('hidden');
+        }, 1200); // tunggu animasi fade-up selesai (1.2s)
+    } else {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('open', 'animate-fade-down');
 
- fadeEls.forEach(el => fadeObserver.observe(el));
+        // Hapus animasi biar bisa diulang lagi
+        setTimeout(() => {
+            mobileMenu.classList.remove('animate-fade-down');
+        }, 1200);
+    }
+});
 
- document.addEventListener('DOMContentLoaded', function() {
-     const hamburger = document.getElementById('hamburger');
-     const mobileMenu = document.getElementById('mobile-menu');
 
-     hamburger.addEventListener('click', () => {
-         mobileMenu.classList.toggle('hidden');
-     });
- });
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('navbar-scrolled', window.scrollY > 20);
+});
+
+// Fade-up effect on scroll
+const fadeEls = document.querySelectorAll('.fade-up');
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => fadeObserver.observe(el));

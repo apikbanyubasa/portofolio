@@ -19,13 +19,17 @@
         <!-- Navbar -->
         <header id="navbar" class="navbar-blur fixed top-0 w-full z-50 border-none">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 class="text-3xl font-extrabold text-blue-700">Apikby</h1>
+                <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-blue-700">Apikby</h1>
 
-                <button id="hamburger" class="hamburger hamburger--collapse md:hidden" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
+                <button id="hamburger"
+                    class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center group">
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute top-2"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800"></span>
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute bottom-2"></span>
                 </button>
+
 
                 <nav class="hidden md:flex md:items-center space-x-6 text-xl font-extrabold">
                     <a href="{{ url('/') }}"
@@ -63,7 +67,7 @@
 
 
         <!-- Spacing because navbar is fixed -->
-        <div class="h-20"></div>
+        <div class="h-16 sm:h-20"></div>
 
         <!-- Konten Utama -->
         <main class="flex-grow">
@@ -72,9 +76,10 @@
                 <div class="max-w-4xl mx-auto px-4">
                     <img src="{{ asset('assets/img/pp2.png') }}"
                         class="w-40 h-40 md:w-52 md:h-52 mx-auto rounded-full border-4 border-white shadow-xl" />
-                    <h2 class="text-4xl font-bold mt-6 text-blue-800">Apik Banyubasa</h2>
+                    <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold mt-6 text-blue-800">Apik Banyubasa</h2>
                     <!-- Jobdesk Section -->
-                    <div class="flex flex-wrap justify-center items-center text-gray-600 text-lg mt-2 space-x-4">
+                    <div
+                        class="flex flex-wrap justify-center items-center text-gray-600 text-xs lg:text-lg mt-2 space-x-4">
                         <div class="flex items-center">
                             <span class="inline-block w-2 h-2 bg-gray-800 rounded-full mr-2 align-middle"></span>
                             <span>Front-End Developer</span>
@@ -114,8 +119,8 @@
             <!-- About Section -->
             <section class="py-12 px-4 fade-up">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-6">About Me</h3>
-                    <p class="text-lg text-gray-700 text-justify leading-relaxed">
+                    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-6">About Me</h3>
+                    <p class="text-xs lg:text-lg text-gray-700 text-justify leading-relaxed">
                         Hello, I’m Apik Banyubasa, a Software Engineering student at IPB University with a strong
                         passion
                         for Web Development. I specialize in front-end development and have proficiency in technologies
@@ -123,7 +128,7 @@
                         HTML, CSS, and JavaScript. With these skills, I am able to create responsive, interactive, and
                         user-friendly interfaces.
                     </p>
-                    <p class="text-lg text-gray-700 text-justify mt-4 leading-relaxed">
+                    <p class="text-xs lg:text-lg text-gray-700 text-justify mt-4 leading-relaxed">
                         Looking ahead, I am committed to expanding my expertise in backend development and aspire to
                         become
                         a
@@ -136,7 +141,7 @@
 
         <!-- Footer -->
         <footer class="bg-transparent backdrop-blur text-center py-6">
-            <p class="text-gray-600">&copy; 2025 Apik Banyubasa.</p>
+            <p class="text-xs lg:text-lg text-gray-600">&copy; 2025 Apik Banyubasa.</p>
         </footer>
     </div>
 

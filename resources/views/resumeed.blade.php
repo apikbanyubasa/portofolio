@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apikby - Portofolio</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/a.png') }}" />
-    <link href="dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -19,16 +18,18 @@
         <!-- Navbar -->
         <header id="navbar" class="navbar-blur fixed top-0 w-full z-50 border-none">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-blue-700">Apikby</h1>
+                <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-blue-700">Apikby</h1>
 
-                <!-- Tombol Hamburger -->
-                <button id="hamburger" class="hamburger hamburger--collapse md:hidden" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
+                <button id="hamburger"
+                    class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center group">
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute top-2"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800"></span>
+                    <span
+                        class="hamburger-line transition duration-300 ease-in-out w-6 h-0.5 bg-gray-800 absolute bottom-2"></span>
                 </button>
 
-                <!-- Menu Utama -->
+
                 <nav class="hidden md:flex md:items-center space-x-6 text-xl font-extrabold">
                     <a href="{{ url('/') }}"
                         class="transition transform hover:scale-105 hover:text-blue-600 {{ Request::is('/') ? 'text-blue-600' : 'text-gray-700' }}">
@@ -64,18 +65,19 @@
         </header>
 
         <!-- Spacing because navbar is fixed -->
-        <div class="h-20"></div>
+        <div class="h-16 sm:h-20"></div>
 
         <!-- Konten Utama -->
         <main class="flex-grow">
             <!-- Projects Section -->
-            <section id="projects" class="py-16">
+            <section id="projects" class="py-8 sm:py-16">
                 <div class="max-w-6xl mx-auto px-4">
-                    <h3 class="text-3xl font-bold mb-10 text-center text-gray-800">Resume</h3>
+                    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-8 text-center text-gray-800">Resume</h3>
 
                     <!-- Tambahan overflow-x-auto untuk mobile -->
-                    <div class="overflow-x-auto">
-                        <div class="flex space-x-4 mb-8 max-w-xl mx-auto md:justify-center flex-nowrap min-w-max">
+                    <div class="overflow-x-auto hide-scrollbar">
+                        <div
+                            class="flex text-xs lg:text-lg space-x-4 max-w-xl mx-auto md:justify-center flex-nowrap min-w-max">
                             <a href="{{ url('/resumeed') }}"
                                 class="text-center bg-blue-600 text-white px-4 py-2 rounded-md flex-shrink-0 transition duration-300 ring-2 ring-blue-400">
                                 Education
@@ -102,24 +104,27 @@
 
             <section id="education" class="text-gray-800 mb-8 px-6">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-6 border-b-4 border-purple-500 inline-block text-center">🎓
+                    <h2
+                        class="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 border-b-4 border-purple-500 inline-block text-center">
+                        🎓
                         Education
                     </h2>
                     <div class="space-y-6">
                         <!-- Education Item -->
-                        <div class="bg-white rounded-xl p-6 shadow-md">
-                            <h3 class="text-xl font-semibold text-purple-700">IPB University</h3>
-                            <p class="text-sm text-gray-600 italic">Bachelor of Applied Science in Software Engineering
+                        <div class="bg-white rounded-xl p-3 sm:p-6 shadow-md">
+                            <h3 class="text-base lg:text-xl font-semibold text-purple-700">IPB University</h3>
+                            <p class="text-xs lg:text-sm text-gray-600 italic">Bachelor of Applied Science in Software
+                                Engineering
                             </p>
-                            <p class="text-sm text-gray-600">2022 - Present</p>
+                            <p class="text-xs lg:text-sm text-gray-600">2022 - Present</p>
                         </div>
 
                         <!-- Add more entries if needed -->
                         <!-- Example: SMA -->
-                        <div class="bg-white rounded-xl p-6 shadow-md">
-                            <h3 class="text-xl font-semibold text-purple-700">SMAN 1 Babakan</h3>
-                            <p class="text-sm text-gray-600 italic">Ilmu Pengetahuan Alam</p>
-                            <p class="text-sm text-gray-600">2019 - 2022</p>
+                        <div class="bg-white rounded-xl p-3 sm:p-6 shadow-md">
+                            <h3 class="text-base lg:text-xl font-semibold text-purple-700">SMAN 1 Babakan</h3>
+                            <p class="text-xs lg:text-sm text-gray-600 italic">Ilmu Pengetahuan Alam</p>
+                            <p class="text-xs lg:text-sm text-gray-600">2019 - 2022</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +133,7 @@
 
         <!-- Footer -->
         <footer class="bg-transparent backdrop-blur text-center py-6">
-            <p class="text-gray-600">&copy; 2025 Apik Banyubasa.</p>
+            <p class="text-xs lg:text-lg text-gray-600">&copy; 2025 Apik Banyubasa.</p>
         </footer>
     </div>
 </body>
