@@ -75,61 +75,79 @@
                 <div class="max-w-6xl mx-auto px-4">
                     <h3
                         class="text-xl sm:text-2xl lg:text-3xl font-bold mb-10 text-center text-gray-800 animate-fadeInUp">
-                        Projects</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-                        <!-- Project 1 -->
+                        Projects
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 items-stretch">
+
+                        <!-- Project Card -->
                         <a href="https://github.com/apikbanyubasa/login-buahku.git" target="_blank">
                             <div
-                                class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
-                                <img src="{{ asset('assets/img/2.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Buahku
+                                class="flex flex-col h-full bg-white p-4 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 duration-300 animate-fadeInUp delay-1">
+                                <div class="mb-4">
+                                    <img src="{{ asset('assets/img/2.png') }}" alt="Buahku" class="rounded w-full">
+                                </div>
+                                <h4 class="text-base lg:text-xl text-center font-semibold text-gray-800 min-h-[3rem]">
+                                    Buahku
                                 </h4>
                             </div>
                         </a>
 
-                        <!-- Project 2 -->
                         <a href="https://github.com/apikbanyubasa/Bioskop.git" target="_blank">
                             <div
-                                class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
-                                <img src="{{ asset('assets/img/1.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Bogor
-                                    Cinemap</h4>
-                            </div>
-                        </a>
-
-                        <!-- Project 3 -->
-                        <a href="https://github.com/apikbanyubasa/yuma-laundry.git" target="_blank">
-                            <div
-                                class="bg-white p-4  rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
-                                <img src="{{ asset('assets/img/3.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Yuma
-                                    Laundry</h4>
-                            </div>
-                        </a>
-
-                        <!-- Project 1 -->
-                        <a href="https://github.com/apikbanyubasa/scanmask.git" target="_blank">
-                            <div
-                                class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
-                                <img src="{{ asset('assets/img/4.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Scanmask
+                                class="flex flex-col h-full bg-white p-4 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 duration-300 animate-fadeInUp delay-1">
+                                <div class="mb-4">
+                                    <img src="{{ asset('assets/img/1.png') }}" alt="Bogor Cinemap"
+                                        class="rounded w-full">
+                                </div>
+                                <h4 class="text-base lg:text-xl text-center font-semibold text-gray-800 min-h-[3rem]">
+                                    Bogor Cinemap
                                 </h4>
                             </div>
                         </a>
 
-                        <!-- Project 2 -->
+                        <a href="https://github.com/apikbanyubasa/yuma-laundry.git" target="_blank">
+                            <div
+                                class="flex flex-col h-full bg-white p-4 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 duration-300 animate-fadeInUp delay-1">
+                                <div class="mb-4">
+                                    <img src="{{ asset('assets/img/3.png') }}" alt="Yuma Laundry"
+                                        class="rounded w-full">
+                                </div>
+                                <h4 class="text-base lg:text-xl text-center font-semibold text-gray-800 min-h-[3rem]">
+                                    Yuma Laundry
+                                </h4>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/apikbanyubasa/scanmask.git" target="_blank">
+                            <div
+                                class="flex flex-col h-full bg-white p-4 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 duration-300 animate-fadeInUp delay-1">
+                                <div class="mb-4">
+                                    <img src="{{ asset('assets/img/4.png') }}" alt="Scanmask" class="rounded w-full">
+                                </div>
+                                <h4 class="text-base lg:text-xl text-center font-semibold text-gray-800 min-h-[3rem]">
+                                    Scanmask
+                                </h4>
+                            </div>
+                        </a>
+
                         <a href="https://github.com/apikbanyubasa/febri_lestari.git" target="_blank">
                             <div
-                                class="bg-white p-4 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-1 transition duration-300 animate-fadeInUp delay-1">
-                                <img src="{{ asset('assets/img/5.png') }}" alt="Project 1" class="rounded mb-4">
-                                <h4 class="text-base lg:text-xl text-center font-semibold mb-2 text-gray-800">Febri
-                                    Lestari</h4>
+                                class="flex flex-col h-full bg-white p-4 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 duration-300 animate-fadeInUp delay-1">
+                                <div class="mb-4">
+                                    <img src="{{ asset('assets/img/5.png') }}" alt="Febri Lestari"
+                                        class="rounded w-full">
+                                </div>
+                                <h4 class="text-base lg:text-xl text-center font-semibold text-gray-800 min-h-[3rem]">
+                                    Febri Lestari
+                                </h4>
                             </div>
                         </a>
 
                     </div>
                 </div>
             </section>
+
+
         </main>
 
         <!-- Footer -->
