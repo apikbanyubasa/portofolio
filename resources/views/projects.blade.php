@@ -70,7 +70,7 @@
 
         <!-- Konten Utama -->
         <main class="flex-grow">
-            <!-- Projects Section -->
+            <!-- Projects Section for Portfolio-->
             <section id="projects" class="py-8 sm:py-16">
                 <div class="max-w-6xl mx-auto px-4">
                     <h3
