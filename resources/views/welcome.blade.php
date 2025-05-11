@@ -9,8 +9,91 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+        }
+
+        .animate-fade-down {
+            animation: fadeDown 1.2s ease-out forwards;
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 1.2s ease-in forwards;
+        }
+
+        /* #mobile-menu default, tanpa opacity/transform lagi */
+        #mobile-menu {
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* saat open, hanya aktifkan pointer dan biarkan animasi yang atur opacity/posisi */
+        #mobile-menu.open {
+            pointer-events: auto;
+        }
+
+        .hamburger-line {
+            transition: all 2s ease;
+        }
+
+        .hamburger-active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            box-shadow: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            @apply backdrop-blur-2xl bg-white/70 shadow-md;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .hide-scrollbar {
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-purple-100 via-blue-100 to-white text-gray-800 font-[Poppins] overflow-x-hidden">

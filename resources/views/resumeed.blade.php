@@ -11,6 +11,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('js/script.js') }}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-purple-100 via-blue-100 to-white text-gray-800 font-[Poppins] overflow-x-hidden">
