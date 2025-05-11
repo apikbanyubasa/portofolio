@@ -5,13 +5,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apikby - Portofolio</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/a.png') }}" />
-    <link href="dist/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <link rel="icon" type="image/png"
+        href="https://media-hosting.imagekit.io/c0c210aeac324604/a.png?Expires=1841581989&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dWjrmYv6feb2J4EsRwLsRiWHPshD~JWBx7iWZ0doAIzqdkhY2tussPfSPrKR4JLy~NjCGIB4eSzOYESVthIl~1cDMw1pdNKNgZ4iyng1p7wE4tYILzZo1NdFFE4Zyu9jUSukSW3ZWDV4i7NJUNbdSgvUGYiDzzxFMAggOpS8iqyJDZvqzH3TH7dqj9ZG~qgqnbhbVqz3FSx5hoqQerom~cujG4tBL9qbSjMKbtR2b~SMS0uIQRP~axdx3IiClL7XQ4AUioyFUNXuCM8nBUi-DT7zjp1F1EXCCO3OLEQ108V-LCy3NE6KsfPkgdufuY0INO2QZcJFacbEpvmChHvXew__" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/script.js') }}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+        }
+
+        .animate-fade-down {
+            animation: fadeDown 1.2s ease-out forwards;
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 1.2s ease-in forwards;
+        }
+
+        /* #mobile-menu default, tanpa opacity/transform lagi */
+        #mobile-menu {
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* saat open, hanya aktifkan pointer dan biarkan animasi yang atur opacity/posisi */
+        #mobile-menu.open {
+            pointer-events: auto;
+        }
+
+        .hamburger-line {
+            transition: all 2s ease;
+        }
+
+        .hamburger-active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            box-shadow: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            @apply backdrop-blur-2xl bg-white/70 shadow-md;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .hide-scrollbar {
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-purple-100 via-blue-100 to-white text-gray-800 font-[Poppins] overflow-x-hidden">
@@ -127,6 +210,52 @@
         </footer>
     </div>
 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // SINGLE event listener, no duplicate
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger-active');
+
+            if (mobileMenu.classList.contains('open')) {
+                // Tambahkan animasi keluar
+                mobileMenu.classList.add('animate-fade-up');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('open', 'animate-fade-up');
+                    mobileMenu.classList.add('hidden');
+                }, 1200); // tunggu animasi fade-up selesai (1.2s)
+            } else {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('open', 'animate-fade-down');
+
+                // Hapus animasi biar bisa diulang lagi
+                setTimeout(() => {
+                    mobileMenu.classList.remove('animate-fade-down');
+                }, 1200);
+            }
+        });
+
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('navbar-scrolled', window.scrollY > 20);
+        });
+
+        // Fade-up effect on scroll
+        const fadeEls = document.querySelectorAll('.fade-up');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        fadeEls.forEach(el => fadeObserver.observe(el));
+    </script>
 </body>
 
 </html>

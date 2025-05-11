@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apikby - Portofolio</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/a.png') }}" />
+    <link rel="icon" type="image/png"
+        href="https://media-hosting.imagekit.io/c0c210aeac324604/a.png?Expires=1841581989&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dWjrmYv6feb2J4EsRwLsRiWHPshD~JWBx7iWZ0doAIzqdkhY2tussPfSPrKR4JLy~NjCGIB4eSzOYESVthIl~1cDMw1pdNKNgZ4iyng1p7wE4tYILzZo1NdFFE4Zyu9jUSukSW3ZWDV4i7NJUNbdSgvUGYiDzzxFMAggOpS8iqyJDZvqzH3TH7dqj9ZG~qgqnbhbVqz3FSx5hoqQerom~cujG4tBL9qbSjMKbtR2b~SMS0uIQRP~axdx3IiClL7XQ4AUioyFUNXuCM8nBUi-DT7zjp1F1EXCCO3OLEQ108V-LCy3NE6KsfPkgdufuY0INO2QZcJFacbEpvmChHvXew__" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
