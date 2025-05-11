@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/script.js') }}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -74,7 +73,7 @@
             <!-- Hero Section -->
             <section class="py-16 text-center fade-up">
                 <div class="max-w-4xl mx-auto px-4">
-                    <img src="{{ asset('assets/img/pp2.png') }}"
+                    <img src="https://media-hosting.imagekit.io/fa6805023e5147a2/pp2.png?Expires=1841581047&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=gu2H0H~JuInpkqBfvmyQVbaCiqvmsnb5ClqA~MWjIxefMWyaIN6H0WLyteAXVTw65qCSHhgt74EcBKJfcDE6REJJvJPKRmo1NJ5F5ugqx6hCooGMz5wWJMbdajJiKao27MC0vESVrG8cpkojcGJDnG1Z74KpE5Lmo~p5Ka-S20MiLpYzVK87nlmkROZZlC-nyQEeUK8hFurLXixzesu39NeSrKyU0FM60J3U4XnZyuRUQndarKzFbtlNEPDOhqnNgVJTdawr9J~Od3570gX5nk9k4tuFug5iL26FVA6KMgfWywG~3ovrwLJmR8-Pbla45H4V9HPruxbcxAF9FcSTpQ__"
                         class="w-40 h-40 md:w-52 md:h-52 mx-auto rounded-full border-4 border-white shadow-xl" />
                     <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold mt-6 text-blue-800">Apik Banyubasa</h2>
                     <!-- Jobdesk Section -->
@@ -145,6 +144,52 @@
         </footer>
     </div>
 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // SINGLE event listener, no duplicate
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger-active');
+
+            if (mobileMenu.classList.contains('open')) {
+                // Tambahkan animasi keluar
+                mobileMenu.classList.add('animate-fade-up');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('open', 'animate-fade-up');
+                    mobileMenu.classList.add('hidden');
+                }, 1200); // tunggu animasi fade-up selesai (1.2s)
+            } else {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('open', 'animate-fade-down');
+
+                // Hapus animasi biar bisa diulang lagi
+                setTimeout(() => {
+                    mobileMenu.classList.remove('animate-fade-down');
+                }, 1200);
+            }
+        });
+
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('navbar-scrolled', window.scrollY > 20);
+        });
+
+        // Fade-up effect on scroll
+        const fadeEls = document.querySelectorAll('.fade-up');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        fadeEls.forEach(el => fadeObserver.observe(el));
+    </script>
 </body>
 
 </html>
