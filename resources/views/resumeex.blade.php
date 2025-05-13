@@ -179,7 +179,7 @@
 
                             <a href="{{ url('/resumepu') }}"
                                 class="text-center bg-gray-800 text-white px-4 py-2 rounded-md flex-shrink-0 hover:bg-blue-600 transition duration-300">
-                                Publication
+                                Publications
                             </a>
                         </div>
                     </div>
