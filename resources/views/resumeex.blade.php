@@ -197,7 +197,7 @@
                         <div class="bg-white rounded-xl p-3 sm:p-6 shadow-md">
                             <h3 class="text-base lg:text-xl font-semibold text-purple-700">Himavo Micro IT</h3>
                             <p class="text-xs lg:text-sm text-gray-600 italic">Web Master Member</p>
-                            <p class="text-xs lg:text-sm text-gray-600">2024 - 2025</p>
+                            <p class="text-xs lg:text-sm text-gray-600">2023 - 2024</p>
                         </div>
                     </div>
                 </div>
