@@ -242,6 +242,17 @@
                             <a href="https://ifrelresearch.org/index.php/jusiik-widyakarya/article/view/4275?articlesBySimilarityPage=7"
                                 class="text-xs lg:text-sm text-purple-500 hover:text-purple-700">Read Full Paper</a>
                         </div>
+                        <div class="bg-white rounded-xl p-3 sm:p-6 shadow-md">
+                            <h3 class="text-base lg:text-xl font-semibold text-purple-700">"Analisis Efektivitas
+                                Aplikasi Write it Japanese dalam Meningkatkan Kemampuan Menulis Hiragana dan Katakana
+                                bagi Pemula"</h3>
+                            <p class="text-xs lg:text-sm text-gray-600 italic">Jurnal Pendidikan, Bahasa, Sastra, Seni,
+                                Budaya, dan Sosial Humaniora, Mei
+                                2025
+                            </p>
+                            <a href="https://pbsi-upr.id/index.php/atmosfer/article/view/1416"
+                                class="text-xs lg:text-sm text-purple-500 hover:text-purple-700">Read Full Paper</a>
+                        </div>
                     </div>
                 </div>
             </section>
