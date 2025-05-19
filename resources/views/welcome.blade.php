@@ -152,7 +152,7 @@
         <!-- Spacing because navbar is fixed -->
         <div class="h-16 sm:h-20"></div>
 
-        <!-- Konten Utama -->
+        <!-- Konten Utama ya-->
         <main class="flex-grow">
             <!-- Hero Section -->
             <section class="py-16 text-center fade-up">
